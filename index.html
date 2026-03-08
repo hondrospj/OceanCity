@@ -1304,9 +1304,9 @@ const DATUMS = ["MLLW", "NAVD88", "MSL", "MHHW"]; // cycle order
 // From  table (Gauge Zero row): datum = MLLW + offset
 const OFFSET_FROM_MLLW = {
   MLLW:   0.00,
-  NAVD88: -3.27,
-  MSL:    -3.15,
-  MHHW:   -6.43
+  NAVD88: -2.03,
+  MSL:    -1.96,
+  MHHW:   -4.3
 };
 
 function mllwToDatum(ft, datum){
@@ -1341,33 +1341,27 @@ function fromDisplayToNavd(displayFt){
 
 
 /* =========================================
-   1) Cohancey River at Greenwich
+   8) Great Egg Harbor Bay at Ocean City
 ========================================= */
 
-/* USGS observed (15-min IV). */
-const USGS_SITE="01413038";
-
-/* Water level ONLY (tide elevation NAVD88). */
+const USGS_SITE="01411320";
 const USGS_PARAM_PRIMARY = "72279";
 
-/* NOAA CO-OPS predictions */
-const COOPS_STATION="8537374";
+const COOPS_STATION="8534975";
 const COOPS_APP="cupajoe.live";
 const COOPS_DATUM="MLLW";
 const COOPS_INTERVAL="6";
 const COOPS_TZ="gmt";
 
-/* Tide-clock settings for crest-anchored highs (NOAA hilo predictions) */
-const NOAA_STATION_TIDECLOCK = "8537374";
+const NOAA_STATION_TIDECLOCK = "8534975";
 const CREST_WINDOW_HOURS = 2;
 const REQUIRE_WITHIN_HOURS = 1;
 
-/* Flood thresholds */
 const THRESH = {
-  MLLW:  { minorLow:7.20, moderateLow:8.20, majorLow:9.20 },
-  NAVD88:{ minorLow:3.93, moderateLow:4.93, majorLow:5.93 },
-  MSL:   { minorLow:4.05, moderateLow:5.05, majorLow:6.05 },
-  MHHW:  { minorLow:0.77, moderateLow:1.77, majorLow:2.77 }
+  MLLW:  { minorLow:5.30, moderateLow:6.30, majorLow:7.30 },
+  NAVD88:{ minorLow:3.27, moderateLow:4.27, majorLow:5.27 },
+  MSL:   { minorLow:3.34, moderateLow:4.34, majorLow:5.34 },
+  MHHW:  { minorLow:1.00, moderateLow:2.00, majorLow:3.00 }
 };
 
       const HOUR_MS = 60 * 60 * 1000;
