@@ -4,11 +4,12 @@
   "datum": "NAVD88",
   "peakMinSepMinutes": 300,
   "thresholdsNAVD88": {
-    "minorLow": 3.10,
-    "moderateLow": 4.10,
-    "majorLow": 5.10
+    "minorLow": 3.27,
+    "moderateLow": 4.27,
+    "majorLow": 5.27
   },
   "method": "crest_anchored_highs_v1",
   "lastProcessedISO": "2000-01-01T00:00:00Z",
   "events": []
 }
+
